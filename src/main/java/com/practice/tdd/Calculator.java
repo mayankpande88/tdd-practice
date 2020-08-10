@@ -2,7 +2,13 @@ package com.practice.tdd;
 
 public class Calculator {
     public int add(String input) {
-        String[] inputArray = input.split("\\W+");
+        String delim="\\s|,";
+        if (input.startsWith("//")) {
+            delim=input.split("\\s")[0].replace("//","");
+            input=input.substring(input.indexOf('\n')+1);
+        }
+        String[] inputArray = input.split(delim);
+      
         if (inputArray.length == 1) {
             return inputArray[0] != "" ? Integer.valueOf(inputArray[0]) : 0;
         }
