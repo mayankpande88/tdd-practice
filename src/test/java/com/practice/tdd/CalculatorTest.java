@@ -35,6 +35,12 @@ public class CalculatorTest {
     @Test(expected =Exception.class)
     public void test5() throws Exception {
         Calculator c= new Calculator();
-        assertEquals(5,c.add("//;\n1\n1;1;-1;-4"));
+        c.add("//;\n1\n1;1;-1;-4");
+    }
+    
+    @Test
+    public void test6() throws Exception {
+        Calculator c= new Calculator();
+        assertEquals(4,c.add("//;\n1\n1;1;1002;1"));
     }
 }

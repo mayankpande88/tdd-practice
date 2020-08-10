@@ -20,10 +20,13 @@ public class Calculator {
                 notValidNos.append(String.format("%s,", no));
                 continue;
             }
+            else if(no > 1000) {
+                continue;
+            }
             sum += no;
         }
         if(notValidNos.length()>0) {
-            throw new Exception(String.format("negatives not allowed ",notValidNos)) ;
+            throw new Exception(String.format("negatives not allowed %s",notValidNos)) ;
         }
         return sum;
     }
