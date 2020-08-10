@@ -12,4 +12,10 @@ public class CalculatorTest {
         Calculator c =new Calculator();
         assertEquals(0, c.add(""));
     }
+    
+    @Test
+    public void test2() {
+        Calculator c= new Calculator();
+        assertEquals(5,c.add("1,1,1,1,1"));
+    }
 }
