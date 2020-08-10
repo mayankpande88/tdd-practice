@@ -18,4 +18,11 @@ public class CalculatorTest {
         Calculator c= new Calculator();
         assertEquals(5,c.add("1,1,1,1,1"));
     }
+    
+    @Test
+    public void test3() {
+        Calculator c= new Calculator();
+        assertEquals(5,c.add("1\n1,1,1,1"));
+        assertEquals(5,c.add("1\n1,1,1,1\n"));
+    }
 }
